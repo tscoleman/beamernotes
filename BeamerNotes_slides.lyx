@@ -1,0 +1,897 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\useinnertheme{circles}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\emph on
+Beamer Notes + Slides – Example
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Beamer Example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Thomas S.
+ Coleman
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Coleman
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Institute
+
+\emph on
+Harris School of Public Policy
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+Harris
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+October 12, 2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mode*
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Creating Notes & Slides
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Goal for Lectures
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Slides for Lectures
+\end_layout
+
+\begin_layout Itemize
+Notes (
+\begin_inset Quotes eld
+\end_inset
+
+script
+\begin_inset Quotes erd
+\end_inset
+
+) for myself
+\end_layout
+
+\begin_layout Itemize
+Ability to print (and then post) either 
+\emph on
+Slides
+\emph default
+ or 
+\emph on
+Notes
+\emph default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+All in the same file
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ability to easily print either Slides or Notes+Slides
+\end_layout
+
+\begin_layout Itemize
+For notes, include both slides and my notes
+\end_layout
+
+\begin_layout Itemize
+For notes, slides must display as they look in presentation mode (but smaller),
+ and also highlighted & demarcated
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Different from Beamer 
+\begin_inset Quotes eld
+\end_inset
+
+Handout
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For many years I have yearned for a way to create a single document that
+ has my full slides (with animations or any other bells-and-whistles) together
+ with the notes and my 
+\begin_inset Quotes eld
+\end_inset
+
+script
+\begin_inset Quotes erd
+\end_inset
+
+ for the presentation – my notes to myself for what I want to say.
+ 
+\end_layout
+
+\begin_layout Itemize
+Slides using Beamer – full power & functionality of Beamer
+\end_layout
+
+\begin_layout Itemize
+Text and notes and anything else I need for myself as reminders, script,
+ and background for the presentation
+\end_layout
+
+\begin_layout Standard
+I have a few objectives for this combination of notes + slides:
+\end_layout
+
+\begin_layout Itemize
+Slides should harness the full power and functionality of Beamer
+\end_layout
+
+\begin_layout Itemize
+Notes should have the full functionality of Latex – equations, graphics,
+ ...
+ 
+\end_layout
+
+\begin_layout Itemize
+Printed version of the notes should show the slides as they appear in the
+ presentation, highlighted and demarcated from the notes
+\end_layout
+
+\begin_layout Itemize
+Printed version of the notes should have slides compact and compressed relative
+ to the slides so that everything can be printed with limited damage to
+ our forests.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Solution – 
+\emph on
+beamerarticle
+\emph default
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Single File
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Contains both the Beamer Slides & text, graphics, equations, ...
+\end_layout
+
+\begin_layout Itemize
+Trick is using 
+\emph on
+beamerarticle
+\emph default
+ & 
+\emph on
+
+\backslash
+mode*
+\emph default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+Set 
+\emph on
+
+\backslash
+mode*
+\emph default
+ at beginning of the document – ignores text in 
+\emph on
+beamer
+\emph default
+ mode
+\end_layout
+
+\begin_layout Frame
+Use 
+\begin_inset Quotes eld
+\end_inset
+
+shadowbox
+\begin_inset Quotes erd
+\end_inset
+
+ to highlight & demarcate slides
+\end_layout
+
+\begin_layout Frame
+For printing Slides, 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+document class “
+\emph on
+beamer
+\emph default
+”
+\end_layout
+
+\begin_layout Itemize
+remove the "
+\emph on
+
+\backslash
+usepackage{beamerarticle,pgf}
+\emph default
+"
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+For printing Notes+Slides
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+document class “
+\emph on
+article
+\emph default
+”
+\end_layout
+
+\begin_layout Itemize
+Insert 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+
+\backslash
+usepackage{beamerarticle,pgf}
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+
+\backslash
+mode*
+\emph default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set this command at the beginning of your document
+\end_layout
+
+\begin_layout Enumerate
+For 
+\emph on
+article
+\emph default
+ class this does nothing, while for 
+\emph on
+beamer
+\emph default
+ class (presentations) it ignores all text outside frames.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Section 21.3 of Beamer User Guide: 
+\begin_inset Quotes eld
+\end_inset
+
+The effect of this mode is to ignore all text outside frames in the presentation
+ modes.
+ In article mode it has no effect.
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Minibox to highlight & demarcate slides
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+I want to clearly demarcate slides – use 
+\begin_inset Quotes eld
+\end_inset
+
+shadowbox
+\begin_inset Quotes erd
+\end_inset
+
+ minipage
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+
+\backslash
+noindent
+\backslash
+shadowbox{
+\backslash
+begin{minipage}[t]{1
+\backslash
+columnwidth - 2
+\backslash
+fboxsep - 2
+\backslash
+fboxrule - 
+\backslash
+shadowsize}%
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+begin{frame}{Title}
+\end_layout
+
+\begin_layout Quotation
+My slide content here
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+end{frame}
+\end_layout
+
+\begin_layout Quotation
+%
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+end{minipage}}
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Print document to 
+\emph on
+pdf
+\emph default
+ using either 
+\emph on
+beamer
+\emph default
+ class (for slides) or 
+\emph on
+article
+\emph default
+ class + 
+\emph on
+beamerarticle
+\emph default
+ package for slides+notes
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Slides: 
+\emph on
+beamer
+\emph default
+ class
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+
+\series bold
+
+\backslash
+documentclass[english]{beamer}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+usepackage[T1]{fontenc}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+usepackage[latin9]{inputenc}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+setcounter{secnumdepth}{3}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+setcounter{tocdepth}{3}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+usepackage{fancybox}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+usepackage{calc}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+makeatletter
+\end_layout
+
+\begin_layout Quotation
+%%% Textclass specific LaTeX commands.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Notes+Slides: 
+\emph on
+article
+\emph default
+ class + 
+\emph on
+beamerarticle
+\emph default
+ package
+\end_layout
+
+\begin_deeper
+\begin_layout Quotation
+
+\series bold
+
+\backslash
+documentclass[english]{article}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+usepackage[T1]{fontenc}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+usepackage[latin9]{inputenc}
+\end_layout
+
+\begin_layout Quotation
+
+\series bold
+
+\backslash
+usepackage{geometry}
+\end_layout
+
+\begin_layout Quotation
+
+\series bold
+
+\backslash
+geometry{verbose}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+setcounter{secnumdepth}{3}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+setcounter{tocdepth}{3}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+usepackage{fancybox}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+usepackage{calc}
+\end_layout
+
+\begin_layout Quotation
+
+\backslash
+makeatletter
+\end_layout
+
+\begin_layout Quotation
+%%% Textclass specific LaTeX commands.
+\end_layout
+
+\begin_layout Quotation
+
+\series bold
+
+\backslash
+usepackage{beamerarticle,pgf}
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+See section 21.2 of the Beamer User Guide.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+I use 
+\emph on
+Lyx
+\emph default
+ and here it is particularly easy
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Main file, with all my slides and text, title 
+\begin_inset Quotes eld
+\end_inset
+
+MySlides_slides.lyx
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set Document Class 
+\emph on
+beamer
+\emph default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Notes file: simple 
+\begin_inset Quotes eld
+\end_inset
+
+cover
+\begin_inset Quotes erd
+\end_inset
+
+ file that 
+\begin_inset Quotes eld
+\end_inset
+
+includes
+\begin_inset Quotes erd
+\end_inset
+
+ my notes file, title 
+\begin_inset Quotes eld
+\end_inset
+
+MySlides_notes.lyx
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Quotes eld
+\end_inset
+
+Include: MySlides_slides.lyx
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set Document Class 
+\emph on
+beamerarticle
+\emph default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+When I print from 
+\begin_inset Quotes eld
+\end_inset
+
+_slides.lyx
+\begin_inset Quotes erd
+\end_inset
+
+ I get slides.
+ When I print from 
+\begin_inset Quotes eld
+\end_inset
+
+_notes.lyx
+\begin_inset Quotes erd
+\end_inset
+
+ I get Notes+Slides.
+ Easy
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+NB - youi may get a warning when printing from 
+\begin_inset Quotes eld
+\end_inset
+
+_notes.lyx
+\begin_inset Quotes erd
+\end_inset
+
+ about a conflict in classes (beamer versus article) but that is OK – you
+ are essentially overwriting the 
+\begin_inset Quotes eld
+\end_inset
+
+beamer
+\begin_inset Quotes erd
+\end_inset
+
+ class with 
+\begin_inset Quotes eld
+\end_inset
+
+article
+\begin_inset Quotes erd
+\end_inset
+
+ class and that is what you want to do.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

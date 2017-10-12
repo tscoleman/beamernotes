@@ -1,0 +1,223 @@
+%% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+% For beamer use the line 1 below, for beamerarticle use the line 2 below
+\documentclass[english]{beamer}
+%\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+% Following two lines for beamerarticle
+%\usepackage{geometry}
+%\geometry{verbose}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{fancybox}
+\usepackage{calc}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+% Following 1 line for beamerarticle
+%\usepackage{beamerarticle,pgf}
+ % this default might be overridden by plain title style
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ % (ERT) argument for the TOC
+ \AtBeginDocument{%
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usetheme{CambridgeUS}
+\usecolortheme{seagull}
+\useinnertheme{circles}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title[\emph{Beamer Example}]{\emph{Beamer Notes + Slides \textendash{} Example}}
+
+\author[Coleman]{Thomas S. Coleman}
+
+\institute[\emph{Harris}]{\emph{Harris School of Public Policy}}
+
+\date{October 12, 2017}
+
+\makebeamertitle
+\mode*
+
+\noindent\shadowbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule - \shadowsize}%
+\begin{frame}{Creating Notes \& Slides}
+
+Goal for Lectures
+\begin{itemize}
+\item Slides for Lectures
+\item Notes (``script'') for myself
+\item Ability to print (and then post) either \emph{Slides} or \emph{Notes} 
+\end{itemize}
+All in the same file
+\begin{itemize}
+\item Ability to easily print either Slides or Notes+Slides
+\item For notes, include both slides and my notes
+\item For notes, slides must display as they look in presentation mode (but
+smaller), and also highlighted \& demarcated
+\end{itemize}
+Different from Beamer ``Handout'' 
+
+\end{frame}
+%
+\end{minipage}}
+
+For many years I have yearned for a way to create a single document
+that has my full slides (with animations or any other bells-and-whistles)
+together with the notes and my ``script'' for the presentation \textendash{}
+my notes to myself for what I want to say. 
+\begin{itemize}
+\item Slides using Beamer \textendash{} full power \& functionality of Beamer
+\item Text and notes and anything else I need for myself as reminders, script,
+and background for the presentation
+\end{itemize}
+I have a few objectives for this combination of notes + slides:
+\begin{itemize}
+\item Slides should harness the full power and functionality of Beamer
+\item Notes should have the full functionality of Latex \textendash{} equations,
+graphics, ... 
+\item Printed version of the notes should show the slides as they appear
+in the presentation, highlighted and demarcated from the notes
+\item Printed version of the notes should have slides compact and compressed
+relative to the slides so that everything can be printed with limited
+damage to our forests. 
+\end{itemize}
+\noindent\shadowbox{\begin{minipage}[t]{1\columnwidth - 2\fboxsep - 2\fboxrule - \shadowsize}%
+\begin{frame}{Solution \textendash{} \emph{beamerarticle} }
+
+Single File
+\begin{itemize}
+\item Contains both the Beamer Slides \& text, graphics, equations, ...
+\item Trick is using \emph{beamerarticle} \& \emph{\textbackslash{}mode{*}} 
+\end{itemize}
+Set \emph{\textbackslash{}mode{*}} at beginning of the document \textendash{}
+ignores text in \emph{beamer} mode
+
+Use ``shadowbox'' to highlight \& demarcate slides
+
+For printing Slides, 
+\begin{itemize}
+\item document class \textquotedblleft \emph{beamer}\textquotedblright{}
+\item remove the \textquotedbl{}\emph{\textbackslash{}usepackage\{beamerarticle,pgf\}}\textquotedbl{}
+\end{itemize}
+For printing Notes+Slides
+\begin{itemize}
+\item document class \textquotedblleft \emph{article}\textquotedblright{}
+\item Insert ``\emph{\textbackslash{}usepackage\{beamerarticle,pgf\}}'' 
+\end{itemize}
+\end{frame}
+%
+%
+\end{minipage}}
+\begin{enumerate}
+\item \emph{\textbackslash{}mode{*}} 
+\begin{enumerate}
+\item Set this command at the beginning of your document
+\item For \emph{article} class this does nothing, while for \emph{beamer}
+class (presentations) it ignores all text outside frames. 
+\item Section 21.3 of Beamer User Guide: ``The effect of this mode is to
+ignore all text outside frames in the presentation modes. In article
+mode it has no effect.'' 
+\end{enumerate}
+\item Minibox to highlight \& demarcate slides
+\begin{enumerate}
+\item I want to clearly demarcate slides \textendash{} use ``shadowbox''
+minipage
+\begin{quotation}
+\textbackslash{}noindent\textbackslash{}shadowbox\{\textbackslash{}begin\{minipage\}{[}t{]}\{1\textbackslash{}columnwidth
+- 2\textbackslash{}fboxsep - 2\textbackslash{}fboxrule - \textbackslash{}shadowsize\}\%
+
+\textbackslash{}begin\{frame\}\{Title\}
+
+My slide content here
+
+\textbackslash{}end\{frame\}
+
+\%
+
+\textbackslash{}end\{minipage\}\}
+\end{quotation}
+\end{enumerate}
+\item Print document to \emph{pdf} using either \emph{beamer} class (for
+slides) or \emph{article} class + \emph{beamerarticle} package for
+slides+notes
+\begin{enumerate}
+\item Slides: \emph{beamer} class
+\begin{quotation}
+\textbf{\textbackslash{}documentclass{[}english{]}\{beamer\}}
+
+\textbackslash{}usepackage{[}T1{]}\{fontenc\}
+
+\textbackslash{}usepackage{[}latin9{]}\{inputenc\}
+
+\textbackslash{}setcounter\{secnumdepth\}\{3\}
+
+\textbackslash{}setcounter\{tocdepth\}\{3\}
+
+\textbackslash{}usepackage\{fancybox\}
+
+\textbackslash{}usepackage\{calc\}
+
+\textbackslash{}makeatletter
+
+\%\%\% Textclass specific LaTeX commands.
+\end{quotation}
+\item Notes+Slides: \emph{article} class + \emph{beamerarticle} package
+\begin{quotation}
+\textbf{\textbackslash{}documentclass{[}english{]}\{article\}}
+
+\textbackslash{}usepackage{[}T1{]}\{fontenc\}
+
+\textbackslash{}usepackage{[}latin9{]}\{inputenc\}
+
+\textbf{\textbackslash{}usepackage\{geometry\}}
+
+\textbf{\textbackslash{}geometry\{verbose\}}
+
+\textbackslash{}setcounter\{secnumdepth\}\{3\}
+
+\textbackslash{}setcounter\{tocdepth\}\{3\}
+
+\textbackslash{}usepackage\{fancybox\}
+
+\textbackslash{}usepackage\{calc\}
+
+\textbackslash{}makeatletter
+
+\%\%\% Textclass specific LaTeX commands.
+
+\textbf{\textbackslash{}usepackage\{beamerarticle,pgf\}}
+\end{quotation}
+\item See section 21.2 of the Beamer User Guide. 
+\end{enumerate}
+\item I use \emph{Lyx} and here it is particularly easy
+\begin{enumerate}
+\item Main file, with all my slides and text, title ``MySlides\_slides.lyx''
+\begin{enumerate}
+\item Set Document Class \emph{beamer} 
+\end{enumerate}
+\item Notes file: simple ``cover'' file that ``includes'' my notes file,
+title ``MySlides\_notes.lyx''
+\begin{enumerate}
+\item ``Include: MySlides\_slides.lyx''
+\item Set Document Class \emph{beamerarticle} 
+\end{enumerate}
+\item When I print from ``\_slides.lyx'' I get slides. When I print from
+``\_notes.lyx'' I get Notes+Slides. Easy
+\begin{enumerate}
+\item NB - youi may get a warning when printing from ``\_notes.lyx'' about
+a conflict in classes (beamer versus article) but that is OK \textendash{}
+you are essentially overwriting the ``beamer'' class with ``article''
+class and that is what you want to do. 
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
