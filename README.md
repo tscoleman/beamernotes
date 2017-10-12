@@ -13,7 +13,7 @@ This is a sample Beamer presentation that combines _Presentation Slides_ with _T
 ### Sample Output
 You can view the sample output in the two included pdfs:
 * Slides: _BeamerNotes_slides.pdf_
-* Notes+Slides: _BeamerNotes_notes.pdf_
+* Notes+Slides: _BeamerNotes_notes.pdf_ - includes instructions on how this works
 ### Latex source file
 * raw latex: _BeamerNotes_slides.tex_
 * * You need to comment / uncomment lines to print as slides versus notes
