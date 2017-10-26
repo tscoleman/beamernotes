@@ -94,6 +94,10 @@ Beamer Example
 
 \end_layout
 
+\begin_layout Subtitle
+https://github.com/tscoleman/beamernotes
+\end_layout
+
 \begin_layout Author
 Thomas S.
  Coleman
@@ -258,6 +262,10 @@ Handout
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection*
+Example: https://github.com/tscoleman/beamernotes
 \end_layout
 
 \begin_layout Standard
