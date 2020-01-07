@@ -1,14 +1,24 @@
 %% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-% For beamer use the line 1 below, for beamerarticle use the line 2 & 3below
+% --- For beamer use the line 1 below, for beamerarticle use the lines 2 below
 \documentclass[english]{beamer}
+% --- Following four lines for beamerarticle
 %\documentclass[english]{article}
 %\usepackage{beamerarticle,pgf}
-\usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
-% Following two lines for beamerarticle
 %\usepackage{geometry}
 %\geometry{verbose}
+% --- End of additional lines for beamerarticle
+% IMPORTANT 
+%    - errors when switching from "beamer" to "beamerarticle"
+%        - auxiliary files left after compiling may produce errors - TRASH ALL AUXILIARY FILES between compiles
+%        - in TexShop got to <File> <Trash Aux Files>
+%    - You may need to compile twice to get Table of Contents properly (at least in TexShop one needs to)
+% Additional comments:
+% Set \mode* at beginning of the document - ignores non-Frame text in beamer mode
+% Use ``shadowbox'' to highlight & demarcate slides
+
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 \usepackage{fancybox}
@@ -16,8 +26,6 @@
 
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
-% Following 1 line for beamerarticle
-%\usepackage{beamerarticle,pgf}
  % this default might be overridden by plain title style
  \newcommand\makebeamertitle{\frame{\maketitle}}%
  % (ERT) argument for the TOC

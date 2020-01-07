@@ -385,7 +385,7 @@ Set
 \backslash
 mode*
 \emph default
- at beginning of the document – ignores text in 
+ at beginning of the document – ignores non-Frame text in 
 \emph on
 beamer
 \emph default
@@ -901,5 +901,97 @@ article
 
 \end_deeper
 \end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Notes at front of .tex file:
+\end_layout
+
+\begin_layout Plain Layout
+% --- For beamer use the line 1 below, for beamerarticle use the lines 2
+ below
+\end_layout
+
+\begin_layout Plain Layout
+
+\backslash
+documentclass[english]{beamer}
+\end_layout
+
+\begin_layout Plain Layout
+% --- Following four lines for beamerarticle
+\end_layout
+
+\begin_layout Plain Layout
+%
+\backslash
+documentclass[english]{article}
+\end_layout
+
+\begin_layout Plain Layout
+%
+\backslash
+usepackage{beamerarticle,pgf}
+\end_layout
+
+\begin_layout Plain Layout
+%
+\backslash
+usepackage{geometry}
+\end_layout
+
+\begin_layout Plain Layout
+%
+\backslash
+geometry{verbose}
+\end_layout
+
+\begin_layout Plain Layout
+% --- End of additional lines for beamerarticle
+\end_layout
+
+\begin_layout Plain Layout
+% IMPORTANT 
+\end_layout
+
+\begin_layout Plain Layout
+% - errors when switching from "beamer" to "beamerarticle"
+\end_layout
+
+\begin_layout Plain Layout
+% - auxiliary files left after compiling may produce errors - TRASH ALL
+ AUXILIARY FILES between compiles
+\end_layout
+
+\begin_layout Plain Layout
+% - in TexShop got to <File> <Trash Aux Files>
+\end_layout
+
+\begin_layout Plain Layout
+% - You may need to compile twice to get Table of Contents properly (at
+ least in TexShop one needs to)
+\end_layout
+
+\begin_layout Plain Layout
+% Additional comments:
+\end_layout
+
+\begin_layout Plain Layout
+% Set 
+\backslash
+mode* at beginning of the document - ignores non-Frame text in beamer mode
+\end_layout
+
+\begin_layout Plain Layout
+% Use ``shadowbox'' to highlight & demarcate slides
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
